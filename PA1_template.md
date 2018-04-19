@@ -149,6 +149,7 @@ df_final <- NULL
 df_weekday <- data.frame(interval = unique(activity2_weekday$interval), avg = as.numeric(mean_activity2_weekday), day = rep("weekday", length(mean_activity2_weekday)))
 df_weekend <- data.frame(interval = unique(activity2_weekend$interval), avg = as.numeric(mean_activity2_weekend), day = rep("weekend", length(mean_activity2_weekend)))
 df_final <- rbind(df_weekday, df_weekend)
-```
 
-xyplot(avg ~ interval | day, data = df\_final, layout = c(1, 2), type = "l", ylab = "Number of steps")
+xyplot(avg ~ interval | day, data = df_final, layout = c(1, 2), 
+       type = "l", ylab = "Number of steps")
+```
