@@ -22,6 +22,7 @@ head(activity)
 su <- tapply(activity$steps, activity$date, sum, na.rm=T)
 
 ## Plot the Histogram
+echo=true
 hist(su, xlab = "sum of steps per day", main = "histogram of steps per day")
 
 ##The mean and the median total number of steps taken per day are reported:
